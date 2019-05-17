@@ -1,5 +1,7 @@
-# pdt-django-web
+# django-web
 Practical docker tips: Django webserver
+
+Simple webserver to demonstrate how to install, secure, monitor, log and visualise data from a django webserver.
 
 # About "Practical Docker Tips"
 In these talks I will give practical tips and tricks on how to effectively use Docker as a valuable tool to solve various problems or just use it for fun projects with all kinds of hardware and software! See my [YouTube Channel with all episodes](https://www.youtube.com/channel/UCxp65f-xyu4z1PvmZBKqZGQ) for more information.
