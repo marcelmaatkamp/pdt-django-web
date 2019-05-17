@@ -1,4 +1,4 @@
-# django-web
+# Practical Docker Tips: django-web
 Practical docker tips: Django webserver
 
 Simple webserver to demonstrate how to install, secure, monitor, log and visualise data from a django webserver.
