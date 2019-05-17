@@ -1,2 +1,27 @@
 version: '3'
 services:
+
+ postgres:
+  image: postgres
+  restart: unless-stopped
+  environment:
+   - POSTGRES_DB=${POSTGRES_DB}
+   - POSTGRES_USER=${POSTGRES_USER}
+   - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+  volumes:
+   - postgres:/var/lib/postgresql/data
+   - ./etc/postgres/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d
+ 
+ django:
+  build: .
+  restart: unless-stopped
+  command: python manage.py runserver 0.0.0.0:8000
+  volumes:
+   - .:/code
+  ports:
+   - "8000:8000"
+  depends_on:
+   - postgres
+
+volumes:
+ postgres:
