@@ -13,7 +13,7 @@ services:
    - ./etc/postgres/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d
  
  django:
-  build: .
+  build: pdt-django-web
   restart: unless-stopped
   command: python manage.py runserver 0.0.0.0:8000
   volumes:
